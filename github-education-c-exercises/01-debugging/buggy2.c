@@ -1,10 +1,17 @@
-
-#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-    string name = get_string("What's your name? " ) ;
-    printf("hello, %s\n" , name) ;
+    // Reserve space for the name
+    char name[50];
 
+    printf("What's your name? ");
+    
+    // Get the name from the user
+    scanf("%s", name);
+
+    // Print the output
+    printf("hello, %s\n", name);
+
+    return 0;
 }

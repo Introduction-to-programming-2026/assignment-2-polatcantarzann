@@ -1,17 +1,33 @@
-#include <cs50.h>
 #include <stdio.h>
 
-int string_length(string s);
+// Function prototype
+int string_length(char s[]);
 
 int main(void)
 {
-    string name = get_string("Name: ");
+    // Reserve space for 50 characters
+    char name[50];
+    
+    printf("Name: ");
+    
+    // Get string input from user
+    scanf("%s", name);
+
     int len = string_length(name);
     printf("%i\n", len);
+    
+    return 0;
 }
 
-int string_length(string s)
+int string_length(char s[])
 {
-    // TODO: count chars until '\0'
-    return 0;
+    int n = 0;
+    
+    // Loop until the null terminator '\0' is found
+    while (s[n] != '\0')
+    {
+        n++;
+    }
+    
+    return n;
 }
