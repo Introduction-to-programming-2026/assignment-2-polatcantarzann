@@ -1,8 +1,17 @@
-// Missing cs50.h, variable's type, semicolon, %s, and second printf argument.
 #include <stdio.h>
 
 int main(void)
 {
-    name = get_string("What's your name? ")
-    printf("hello, world\n");
+    // Reserve space for the name
+    char name[50];
+
+    printf("What's your name? ");
+    
+    // Get the name from the user
+    scanf("%s", name);
+
+    // Print the output
+    printf("hello, %s\n", name);
+
+    return 0;
 }
